@@ -28,9 +28,11 @@ export const cookieUtils = {
     const cookies = this.getAll()
 
     for (const key in cookies) {
-      if (Object.prototype.hasOwnProperty.call(cookies, key)) {
-        this.remove(key)
-      }
+      console.log(key)
+
+      // if (Object.hasOwn(cookies, key)) {
+      //   this.remove(key)
+      // }
     }
   }
 }
