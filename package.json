@@ -79,5 +79,8 @@
     "cz-customizable": {
       "config": ".cz-config.ts"
     }
+  },
+  "engines": {
+    "node": "20.17.0"
   }
 }

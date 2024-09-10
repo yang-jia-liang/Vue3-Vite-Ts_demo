@@ -1,39 +1,28 @@
-# vue3+vite+ts_demo
+# integrated-platform
 
-This template should help get you started developing with Vue 3 in Vite.
+综合服务平台
 
-## Recommended IDE Setup
+Vue 3 + Typescript + Vite + Pinia
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## node版本
 
-## Type Support for `.vue` Imports in TS
+2024/09/10 最新的长期支持版本
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- `nvm install 20.17.0`
+- `nvm use 20.17.0`
 
-## Customize configuration
+## 工具文档
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+> - [VueUse（Vue组合实用函数）](https://vueuse.nodejs.cn/)
+> - [ElementPlus (组件库)](https://element-plus.org/zh-CN/)
+> - [tailwindcss（样式库）](https://www.tailwindcss.cn/docs/installation)
+> - [Vue_v3](https://cn.vuejs.org/api/)
+> - [Vite_v5](https://cn.vitejs.dev/config/)
+> - [VueRouter_v4](https://router.vuejs.org/zh/guide/)
+> - [Pinia](https://pinia.vuejs.org/zh/core-concepts/actions.html)
 
-## Project Setup
+# 换源
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+npm cache clean --force
+npm config get registry
+npm config set registry https://registry.npmmirror.com
