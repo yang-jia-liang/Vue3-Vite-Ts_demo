@@ -3,21 +3,26 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+
+// elementPlus
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+// elementPlus-icon
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
+
   plugins: [
     vue(),
     vueJsx(),
 
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
     Components({
       resolvers: [
@@ -32,7 +37,7 @@ export default defineConfig({
 
           enabledCollections: ['ep'] // 指定启用的图标集合
         })
-      ],
+      ]
     }),
     Icons({
       autoInstall: true // 自动安装图标组件
@@ -52,8 +57,6 @@ export default defineConfig({
   },
 
   build: {
-    target: 'esnext', // 支持顶级 await
-
     outDir: `dist/integrated_platform`, // 设置输出目录
 
     // 打包按资源类型分文件夹

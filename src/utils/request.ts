@@ -12,7 +12,7 @@ const ERROR_DEFAULT_MSG = '请求失败'
 
 let baseURL
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://192.168.2.51:4080/teapi/V1'
+  baseURL = 'http://192.168.2.51:4080'
 }
 
 // loading
@@ -67,7 +67,7 @@ instance.interceptors.request.use(
       header['X-CSRF-TOKEN'] = dataUtils.encrypt(`qinglu+${Date.now()}+${Math.random()}`)
     }
 
-    config.headers = header;
+    config.headers = header
 
     return config
   },
@@ -76,8 +76,8 @@ instance.interceptors.request.use(
   }
 )
 
-type _AxiosRequestConfig = AxiosRequestConfig & { loading?: boolean, closeError?: boolean }
-const request = function <T=any>(config: _AxiosRequestConfig):Promise<T> {
+type _AxiosRequestConfig = AxiosRequestConfig & { loading?: boolean; closeError?: boolean }
+const request = function <T = any>(config: _AxiosRequestConfig): Promise<T> {
   const loading = config.loading ?? true
   const closeError = config.closeError ?? false
   loading && openLoading()
